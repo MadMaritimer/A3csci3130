@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.acme.a3csci3130">
+    package="com.acme.A4">
 
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".MyApplicationData"
+        android:name="com.acme.A4.MyApplicationData"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.acme.A4.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,10 +21,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DetailViewActivity"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".CreateContactAcitivity"
-            android:parentActivityName=".MainActivity" />
+            android:name="com.acme.A4.DetailViewActivity"
+            android:parentActivityName="com.acme.A4.MainActivity" />
+        <activity android:name="com.acme.A4.CreateBusinessAcitivity"
+            android:parentActivityName="com.acme.A4.MainActivity" />
     </application>
 
 </manifest>

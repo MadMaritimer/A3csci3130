@@ -1,4 +1,4 @@
-package com.acme.a3csci3130;
+package com.acme.A4;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class CreateContactAcitivity extends Activity {
+public class CreateBusinessAcitivity extends Activity {
 
     private Button submitButton;
     private EditText nameField, emailField;
@@ -29,9 +29,11 @@ public class CreateContactAcitivity extends Activity {
         String personID = appState.firebaseReference.push().getKey();
         String name = nameField.getText().toString();
         String email = emailField.getText().toString();
-        Contact person = new Contact(personID, name, email);
+        String address = "";
+        String prov = "";
+        Business nu_business = new Business(personID, name, email, address, prov);
 
-        appState.firebaseReference.child(personID).setValue(person);
+        appState.firebaseReference.child(personID).setValue(nu_business);
 
         finish();
 

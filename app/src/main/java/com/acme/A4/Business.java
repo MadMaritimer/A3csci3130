@@ -1,7 +1,6 @@
-package com.acme.a3csci3130;
+package com.acme.A4;
 
 import com.google.firebase.database.Exclude;
-import com.google.firebase.database.IgnoreExtraProperties;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -12,28 +11,32 @@ import java.util.Map;
  * Firebase databse. This is converted to a JSON format
  */
 
-public class Contact implements Serializable {
+public class Business implements Serializable {
 
-    public  String uid;
+    public  String bID;
     public  String name;
-    public  String email;
+    public  String bType;
+    public  String address;
+    public  String prov;
 
-    public Contact() {
+    public Business() {
         // Default constructor required for calls to DataSnapshot.getValue
     }
 
-    public Contact(String uid, String name, String email){
-        this.uid = uid;
+    public Business(String bID, String name, String bType, String address, String prov){
+        this.bID = bID;
         this.name = name;
-        this.email = email;
+        this.bType = bType;
+        this.address = address;
+        this.prov = prov;
     }
 
     @Exclude
     public Map<String, Object> toMap(){
         HashMap<String, Object> result = new HashMap<>();
-        result.put("uid", uid);
+        result.put("bID", bID);
         result.put("name", name);
-        result.put("email", email);
+        result.put("bType", bType);
 
         return result;
     }
